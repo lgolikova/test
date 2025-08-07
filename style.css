@@ -47,7 +47,7 @@
 }
 .header__btn_pink {
   background-color: #F72585;
-  border: none;
+  border: 1px solid;
   color: #fff;
 }
 .header__search-bar {
@@ -302,6 +302,10 @@
 .card {
   max-width: 295px;
   padding: 16px;
+  border-radius: 8px;
+}
+.card:hover {
+  box-shadow: 40px 40px 57px rgba(0, 0, 0, 0.1);
 }
 .card__name {
   font-size: 16px;
@@ -391,4 +395,16 @@
   display: block;
   margin: 0 auto;
   margin-bottom: 120px;
+}
+
+.header__btn_pink:hover, .hero__search-btn:hover, .courses__btn:hover {
+  background-color: #fff;
+  color: #F72585;
+  border: 1px solid #F72585;
+}
+
+.header__btn_pink:active, .hero__search-btn:active, .courses__btn:active {
+  background-color: #FA6BAC;
+  color: #fff;
+  border: 1px solid;
 }/*# sourceMappingURL=style.css.map */

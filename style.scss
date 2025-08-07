@@ -55,7 +55,7 @@
 
     &__btn_pink {
         background-color: $colorPink;
-        border: none;
+        border: 1px solid;
         color: #fff;
     }
 
@@ -327,6 +327,11 @@
 .card {
     max-width: 295px;
     padding: 16px;
+    border-radius: 8px;
+
+    &:hover {
+        box-shadow: 40px 40px 57px rgba(0, 0, 0, 0.1);
+    }
 
     &__name {
         font-size: 16px;
@@ -425,4 +430,16 @@
     display: block;
     margin: 0 auto;
     margin-bottom: 120px;
+}
+
+.header__btn_pink:hover, .hero__search-btn:hover, .courses__btn:hover {
+    background-color: #fff;
+    color: $colorPink;
+    border: 1px solid $colorPink;
+}
+
+.header__btn_pink:active, .hero__search-btn:active, .courses__btn:active {
+    background-color: #FA6BAC;
+    color: #fff;
+    border: 1px solid;
 }
