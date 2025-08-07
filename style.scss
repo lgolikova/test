@@ -1,3 +1,5 @@
+@import 'vars';
+
 * {
     padding: 0;
     margin: 0;
@@ -13,6 +15,8 @@
     display: flex;
     justify-content: space-between;
     max-width: 1440px;
+    font-family: 'Montserrat', sans-serif;
+
 
     &__container {
         display: flex;
@@ -23,6 +27,59 @@
     &__btn-container {
         display: flex;
         gap: 16px;
+    }
+
+    &__link {
+        text-decoration: none;
+        color: $colorDark;
+        font-size: 16px;
+        line-height: 32px;
+    }
+
+    &__btn {
+        padding: 8px 32px;
+        border-radius: 8px;
+        font-size: 16px;
+        line-height: 32px;
+        cursor: pointer;
+        font-family: inherit;
+    }
+
+    &__btn_white {
+        background-color: #fff;
+        color: $colorDark;
+        border: 1px solid $colorDark;
+    }
+
+    &__btn_pink {
+        background-color: $colorPink;
+        border: none;
+        color: #fff;
+    }
+
+    &__search-bar {
+        padding: 12px 16px;
+        width: 443px;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+    }
+
+    &__search-bar::placeholder {
+        color: #ccc;
+    }
+
+    &__input-container {
+        position: relative;
+    }
+
+    &__input-container::before {
+    content: url(./assets/images/search-gray.svg);
+    width: 24px;
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    pointer-events: none;
+    transform: translateY(-50%);
     }
 }
 
@@ -35,6 +92,7 @@
         padding: 65px 64px 0;
         display: flex;
         justify-content: space-between;
+        border-radius: 8px;
     }
 
     &__heading {
@@ -61,12 +119,45 @@
         padding: 24px 16px 28px;
         margin-bottom: 56px;
         width: 100%;
+        border-radius: 8px;
+        border: 1px solid;
     }
 
     &__search-bar::placeholder {
         font-family: 'Montserrat', sans-serif;
         font-size: 16px;
         line-height: 27px;
+        padding-left: 56px;
+    }
+
+    &__search-bar-container {
+        position: relative;
+    }
+
+    &__search-bar-container::before {
+        content: url(./assets/images/search.svg);
+        width: 28px;
+        position: absolute;
+        left:16px;
+        top: calc(50% - 28px);
+        pointer-events: none;
+        transform: translateY(-50%);
+    }
+
+    &__search-btn {
+        position: absolute;
+        right: 16px;
+        top: calc(50% - 28px);
+        transform: translateY(-50%);
+        cursor: pointer;
+        font-size: 16px;
+        line-height: 24px;
+        padding: 12px 32px;
+        background-color: $colorPink;
+        color: #fff;
+        font-family: inherit;
+        border: 1px solid;
+        border-radius: 8px;
     }
 
     &__plus-container {
@@ -80,5 +171,92 @@
         font-size: 16px;
         font-weight: 700;
         line-height: 24px;
+    }
+
+    &__img-container {
+        position: relative;
+    }
+
+    &__icon {
+        position: absolute;
+    }
+
+    &__basic-img {
+        border-radius: 8px;
+    }
+}
+
+.hero__rating {
+    color: $colorDark;
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 700;
+
+    &-container {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        bottom: 48px;
+        right: 30px;
+        background-color: #fff;
+        padding: 16px;
+        border-radius: 8px;
+        text-align: center;
+    }
+
+    &-text {
+        color: $colorDark;
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 500;
+        margin-bottom: 4px;
+    }
+}
+
+.hero__star-container {
+    display: flex;
+    gap: 8px;
+}
+
+.hero__icon {
+    &_bell {
+        top: 56.66px;
+        left: 80.66px;
+        transform: rotate(-22deg);
+    }
+
+    &_verifire {
+        top: 303.5px;
+        right: 11.5px;
+        transform: rotate(29deg);
+    }
+
+    &_love {
+        bottom: 235.15px;
+        left: 55.85px;
+        transform: rotate(-19.5deg);
+    }
+
+}
+.hero__plus-item {
+    &_acces::before {
+        content: url(./assets/images/access_alarm.svg);
+        width: 28px;
+        margin-right: 8px;
+        vertical-align: middle;
+    }
+
+    &_mentor::before {
+        content: url(./assets/images/user.svg);
+        width: 28px;
+        margin-right: 8px;
+        vertical-align: middle;
+    }
+
+    &_courses::before {
+        content: url(./assets/images/video_library.svg);
+        width: 28px;
+        margin-right: 8px;
+        vertical-align: middle;
     }
 }
