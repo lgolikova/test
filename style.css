@@ -29,6 +29,7 @@
   color: #1C3554;
   font-size: 16px;
   line-height: 32px;
+  font-weight: 500;
 }
 .header__btn {
   padding: 8px 32px;
@@ -37,6 +38,7 @@
   line-height: 32px;
   cursor: pointer;
   font-family: inherit;
+  font-weight: 500;
 }
 .header__btn_white {
   background-color: #fff;
@@ -300,7 +302,6 @@
 .card {
   max-width: 295px;
   padding: 16px;
-  border: 1px solid;
 }
 .card__name {
   font-size: 16px;
@@ -355,7 +356,7 @@
   position: relative;
   margin-bottom: 27px;
 }
-.card__btn {
+.card__category {
   position: absolute;
   left: 50%;
   bottom: -7px;
@@ -367,4 +368,27 @@
   border-radius: 8px;
   padding: 4px 24px;
   border: none;
+  pointer-events: none;
+}
+
+.curses__card-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  row-gap: 24px;
+  -moz-column-gap: 16px;
+       column-gap: 16px;
+  margin-bottom: 56px;
+}
+
+.courses__btn {
+  background-color: #F72585;
+  padding: 14px 87.5px;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 120px;
 }/*# sourceMappingURL=style.css.map */
