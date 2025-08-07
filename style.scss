@@ -93,6 +93,22 @@
         display: flex;
         justify-content: space-between;
         border-radius: 8px;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+    }
+
+    &__circle {
+        position: absolute;
+        height: 466px;
+        width: 466px;
+        border-radius: 50%;
+        top: 200px;
+        right: 96px;
+        background-color: #FA6BAC;
+        // opacity: 0.8;
+        filter: blur(246px);
+        z-index: 3;
     }
 
     &__heading {
@@ -128,6 +144,7 @@
         font-size: 16px;
         line-height: 27px;
         padding-left: 56px;
+        color: #808080;
     }
 
     &__search-bar-container {
@@ -175,6 +192,7 @@
 
     &__img-container {
         position: relative;
+        z-index: 4;
     }
 
     &__icon {
