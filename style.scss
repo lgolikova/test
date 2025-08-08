@@ -16,7 +16,7 @@
     justify-content: space-between;
     max-width: 1440px;
     font-family: 'Montserrat', sans-serif;
-
+    margin: 0 auto;
 
     &__container {
         display: flex;
@@ -106,6 +106,7 @@
         z-index: 1;
         overflow: hidden;
         height: 748px;
+        margin: 0 auto;
     }
 
     &__circle {
@@ -297,7 +298,6 @@
     max-width: 1228px;
     font-family: 'Rubik', sans-serif;
 
-    
     &__heading {
         font-size: 48px;
         line-height: 63.98px;
@@ -330,6 +330,7 @@
         display: flex;
         max-width: 941px;
         justify-content: space-between;
+        margin: 0 auto;
     }
 
     &__tab-container {
@@ -428,7 +429,7 @@
     }
 }
 
-.curses__card-container {
+.courses__card-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     row-gap: 24px;

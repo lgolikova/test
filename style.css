@@ -17,7 +17,7 @@
   .courses {
     padding: 0 20px;
   }
-  .curses__card-container {
+  .courses__card-container {
     grid-template-columns: repeat(3, 1fr);
   }
   .card__image-container img {
@@ -54,7 +54,7 @@
     margin-bottom: 24px;
     padding-top: 23px;
   }
-  .curses__card-container {
+  .courses__card-container {
     grid-template-columns: 1fr;
   }
   .courses__tab-list {
@@ -135,6 +135,7 @@
   justify-content: space-between;
   max-width: 1440px;
   font-family: "Montserrat", sans-serif;
+  margin: 0 auto;
 }
 .header__container {
   display: flex;
@@ -228,6 +229,7 @@
   z-index: 1;
   overflow: hidden;
   height: 748px;
+  margin: 0 auto;
 }
 .hero__circle {
   position: absolute;
@@ -436,6 +438,7 @@
   display: flex;
   max-width: 941px;
   justify-content: space-between;
+  margin: 0 auto;
 }
 .courses__tab-container {
   margin-bottom: 32px;
@@ -521,7 +524,7 @@
   white-space: nowrap;
 }
 
-.curses__card-container {
+.courses__card-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   row-gap: 24px;
@@ -580,7 +583,7 @@
   .courses {
     padding: 0 20px;
   }
-  .curses__card-container {
+  .courses__card-container {
     grid-template-columns: repeat(3, 1fr);
   }
   .card__image-container img {
@@ -617,7 +620,7 @@
     margin-bottom: 24px;
     padding-top: 23px;
   }
-  .curses__card-container {
+  .courses__card-container {
     grid-template-columns: 1fr;
   }
   .courses__tab-list {
