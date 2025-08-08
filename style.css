@@ -1,3 +1,124 @@
+@media screen and (max-width: 1360px) {
+  .header {
+    padding: 36px 40px;
+  }
+  .hero__content {
+    padding: 65px 60px 0;
+    gap: 10px;
+  }
+  .hero__img-container {
+    display: none;
+  }
+  .header__search-bar {
+    width: 250px;
+  }
+}
+@media screen and (max-width: 1270px) {
+  .courses {
+    padding: 0 20px;
+  }
+  .curses__card-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .card__image-container img {
+    width: 100%;
+  }
+  .card {
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .courses__tab-list {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  .header__input-container {
+    display: none;
+  }
+  .courses__tab-list {
+    row-gap: 10px;
+    padding: 0 20px;
+  }
+  .card__name {
+    max-width: 250px;
+  }
+  .hero__circle {
+    z-index: -1;
+  }
+}
+@media screen and (max-width: 767px) {
+  .hero__heading {
+    font-size: 38px;
+    font-weight: 600;
+    line-height: 48px;
+    margin-bottom: 24px;
+    padding-top: 23px;
+  }
+  .curses__card-container {
+    grid-template-columns: 1fr;
+  }
+  .courses__tab-list {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    overflow-x: auto;
+    -moz-column-gap: 15px;
+         column-gap: 15px;
+  }
+  .courses__tab {
+    white-space: nowrap;
+  }
+  .courses__tab_active {
+    color: #F72585;
+    background-color: #fff;
+  }
+  .hero__content {
+    padding: 50px 40px 40px;
+    height: auto;
+  }
+  .courses__heading {
+    font-size: 28px;
+    line-height: 63.98px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  .hero__plus-container {
+    gap: 10px;
+    padding-bottom: 30px;
+    flex-direction: column;
+  }
+  .hero__search-bar::-moz-placeholder {
+    color: transparent;
+  }
+  .hero__search-bar:-ms-input-placeholder {
+    color: transparent;
+  }
+  .hero__search-bar::placeholder {
+    color: transparent;
+  }
+  .hero {
+    margin-bottom: 50px;
+  }
+  .hero-container-left {
+    width: 100%;
+    max-width: 100%;
+  }
+  .header__container:last-of-type {
+    display: none;
+  }
+  .header__btn_mobile {
+    background-color: #F72585;
+    border: 1px solid;
+    color: #fff;
+  }
+  .header {
+    padding: 36px 20px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .header__btn_mobile {
+    display: none;
+  }
+}
 * {
   padding: 0;
   margin: 0;
@@ -29,16 +150,17 @@
   color: #1C3554;
   font-size: 16px;
   line-height: 32px;
-  font-weight: 500;
+  font-weight: 600;
 }
 .header__btn {
-  padding: 8px 32px;
+  padding: 8px 31px;
   border-radius: 8px;
   font-size: 16px;
   line-height: 32px;
   cursor: pointer;
   font-family: inherit;
-  font-weight: 500;
+  font-weight: 600;
+  height: 48px;
 }
 .header__btn_white {
   background-color: #fff;
@@ -55,15 +177,28 @@
   width: 443px;
   border-radius: 8px;
   border: 1px solid #ccc;
+  height: 48px;
 }
 .header__search-bar::-moz-placeholder {
-  color: #ccc;
+  color: #808080;
+  font-size: 14px;
+  line-height: 24px;
+  font-family: inherit;
+  font-family: "Montserrat", sans-serif;
 }
 .header__search-bar:-ms-input-placeholder {
-  color: #ccc;
+  color: #808080;
+  font-size: 14px;
+  line-height: 24px;
+  font-family: inherit;
+  font-family: "Montserrat", sans-serif;
 }
 .header__search-bar::placeholder {
-  color: #ccc;
+  color: #808080;
+  font-size: 14px;
+  line-height: 24px;
+  font-family: inherit;
+  font-family: "Montserrat", sans-serif;
 }
 .header__input-container {
   position: relative;
@@ -72,7 +207,7 @@
   content: url(./assets/images/search-gray.svg);
   width: 24px;
   position: absolute;
-  right: 12px;
+  right: 14px;
   top: 50%;
   pointer-events: none;
   transform: translateY(-50%);
@@ -92,6 +227,7 @@
   position: relative;
   z-index: 1;
   overflow: hidden;
+  height: 748px;
 }
 .hero__circle {
   position: absolute;
@@ -110,6 +246,7 @@
   font-weight: 700;
   line-height: 88px;
   margin-bottom: 24px;
+  padding-top: 23px;
 }
 .hero__desc {
   font-family: "Montserrat", sans-serif;
@@ -127,26 +264,28 @@
   width: 100%;
   border-radius: 8px;
   border: 1px solid;
+  height: 80px;
+  z-index: 5;
 }
 .hero__search-bar::-moz-placeholder {
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
   line-height: 27px;
-  padding-left: 56px;
+  padding-left: 40px;
   color: #808080;
 }
 .hero__search-bar:-ms-input-placeholder {
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
   line-height: 27px;
-  padding-left: 56px;
+  padding-left: 40px;
   color: #808080;
 }
 .hero__search-bar::placeholder {
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
   line-height: 27px;
-  padding-left: 56px;
+  padding-left: 40px;
   color: #808080;
 }
 .hero__search-bar-container {
@@ -169,12 +308,13 @@
   cursor: pointer;
   font-size: 16px;
   line-height: 24px;
-  padding: 12px 32px;
+  padding: 12px 34px;
   background-color: #F72585;
   color: #fff;
   font-family: inherit;
   border: 1px solid;
   border-radius: 8px;
+  height: 56px;
 }
 .hero__plus-container {
   display: flex;
@@ -185,7 +325,7 @@
   color: #fff;
   font-size: 16px;
   font-weight: 700;
-  line-height: 24px;
+  line-height: 18px;
 }
 .hero__img-container {
   position: relative;
@@ -208,7 +348,7 @@
   display: flex;
   flex-direction: column;
   position: absolute;
-  bottom: 48px;
+  bottom: 54px;
   right: 30px;
   background-color: #fff;
   padding: 16px;
@@ -235,11 +375,11 @@
 }
 .hero__icon_verifire {
   top: 303.5px;
-  right: 11.5px;
+  right: 11px;
   transform: rotate(29deg);
 }
 .hero__icon_love {
-  bottom: 235.15px;
+  bottom: 239px;
   left: 55.85px;
   transform: rotate(-19.5deg);
 }
@@ -247,19 +387,19 @@
 .hero__plus-item_acces::before {
   content: url(./assets/images/access_alarm.svg);
   width: 28px;
-  margin-right: 8px;
+  margin-right: 5px;
   vertical-align: middle;
 }
 .hero__plus-item_mentor::before {
   content: url(./assets/images/user.svg);
   width: 28px;
-  margin-right: 8px;
+  margin-right: 5px;
   vertical-align: middle;
 }
 .hero__plus-item_courses::before {
   content: url(./assets/images/video_library.svg);
   width: 28px;
-  margin-right: 8px;
+  margin-right: 5px;
   vertical-align: middle;
 }
 
@@ -282,13 +422,15 @@
   color: #aaa;
   cursor: pointer;
   padding: 8px 0;
+  width: 167px;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
 }
 .courses__tab_active {
   color: #fff;
   background-color: #F72585;
-  width: 167px;
   border-radius: 8px;
-  text-align: center;
 }
 .courses__tab-list {
   display: flex;
@@ -318,14 +460,14 @@
   font-size: 12px;
   line-height: 24px;
   font-family: "Montserrat", sans-serif;
-  font-weight: 500;
+  font-weight: 600;
   color: #F72585;
-  margin-bottom: 8px;
+  margin-bottom: 11px;
 }
 .card__star-container {
   display: flex;
   gap: 4.01px;
-  margin-bottom: 16px;
+  margin-bottom: 18px;
 }
 .card__star {
   width: 16.05px;
@@ -333,10 +475,11 @@
 }
 .card__votes-amount {
   font-size: 14px;
-  line-height: 24px;
+  line-height: 17px;
   font-family: "Montserrat", sans-serif;
   color: #808080;
-  font-weight: 500;
+  font-weight: 600;
+  padding-left: 3px;
 }
 .card__price_old {
   font-size: 16px;
@@ -344,6 +487,7 @@
   color: #ccc;
   text-decoration: line-through;
   font-family: "Montserrat", sans-serif;
+  padding-top: 3px;
 }
 .card__price-container {
   display: flex;
@@ -358,7 +502,7 @@
 }
 .card__image-container {
   position: relative;
-  margin-bottom: 27px;
+  margin-bottom: 24px;
 }
 .card__category {
   position: absolute;
@@ -373,6 +517,8 @@
   padding: 4px 24px;
   border: none;
   pointer-events: none;
+  font-family: "Montserrat", sans-serif;
+  white-space: nowrap;
 }
 
 .curses__card-container {
@@ -381,7 +527,7 @@
   row-gap: 24px;
   -moz-column-gap: 16px;
        column-gap: 16px;
-  margin-bottom: 56px;
+  margin-bottom: 57px;
 }
 
 .courses__btn {
@@ -390,11 +536,13 @@
   border: none;
   border-radius: 8px;
   color: #fff;
-  font-weight: 500;
+  font-weight: 600;
   font-family: "Montserrat", sans-serif;
   display: block;
   margin: 0 auto;
   margin-bottom: 120px;
+  font-size: 16px;
+  line-height: 32px;
 }
 
 .header__btn_pink:hover, .hero__search-btn:hover, .courses__btn:hover {
@@ -407,4 +555,130 @@
   background-color: #FA6BAC;
   color: #fff;
   border: 1px solid;
+}
+
+.card__category_public {
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 1360px) {
+  .header {
+    padding: 36px 40px;
+  }
+  .hero__content {
+    padding: 65px 60px 0;
+    gap: 10px;
+  }
+  .hero__img-container {
+    display: none;
+  }
+  .header__search-bar {
+    width: 250px;
+  }
+}
+@media screen and (max-width: 1270px) {
+  .courses {
+    padding: 0 20px;
+  }
+  .curses__card-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .card__image-container img {
+    width: 100%;
+  }
+  .card {
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .courses__tab-list {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  .header__input-container {
+    display: none;
+  }
+  .courses__tab-list {
+    row-gap: 10px;
+    padding: 0 20px;
+  }
+  .card__name {
+    max-width: 250px;
+  }
+  .hero__circle {
+    z-index: -1;
+  }
+}
+@media screen and (max-width: 767px) {
+  .hero__heading {
+    font-size: 38px;
+    font-weight: 600;
+    line-height: 48px;
+    margin-bottom: 24px;
+    padding-top: 23px;
+  }
+  .curses__card-container {
+    grid-template-columns: 1fr;
+  }
+  .courses__tab-list {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    overflow-x: auto;
+    -moz-column-gap: 15px;
+         column-gap: 15px;
+  }
+  .courses__tab {
+    white-space: nowrap;
+  }
+  .courses__tab_active {
+    color: #F72585;
+    background-color: #fff;
+  }
+  .hero__content {
+    padding: 50px 40px 40px;
+    height: auto;
+  }
+  .courses__heading {
+    font-size: 28px;
+    line-height: 63.98px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  .hero__plus-container {
+    gap: 10px;
+    padding-bottom: 30px;
+    flex-direction: column;
+  }
+  .hero__search-bar::-moz-placeholder {
+    color: transparent;
+  }
+  .hero__search-bar:-ms-input-placeholder {
+    color: transparent;
+  }
+  .hero__search-bar::placeholder {
+    color: transparent;
+  }
+  .hero {
+    margin-bottom: 50px;
+  }
+  .hero-container-left {
+    width: 100%;
+    max-width: 100%;
+  }
+  .header__container:last-of-type {
+    display: none;
+  }
+  .header__btn_mobile {
+    background-color: #F72585;
+    border: 1px solid;
+    color: #fff;
+  }
+  .header {
+    padding: 36px 20px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .header__btn_mobile {
+    display: none;
+  }
 }/*# sourceMappingURL=style.css.map */

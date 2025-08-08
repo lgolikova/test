@@ -1,4 +1,4 @@
-@import 'vars';
+@import 'vars', 'media';
 
 * {
     padding: 0;
@@ -34,17 +34,18 @@
         color: $colorDark;
         font-size: 16px;
         line-height: 32px;
-        font-weight: 500;
+        font-weight: 600;
     }
 
     &__btn {
-        padding: 8px 32px;
+        padding: 8px 31px;
         border-radius: 8px;
         font-size: 16px;
         line-height: 32px;
         cursor: pointer;
         font-family: inherit;
-        font-weight: 500;
+        font-weight: 600;
+        height: 48px;
     }
 
     &__btn_white {
@@ -64,10 +65,15 @@
         width: 443px;
         border-radius: 8px;
         border: 1px solid #ccc;
+        height: 48px;
     }
 
     &__search-bar::placeholder {
-        color: #ccc;
+        color: #808080;
+        font-size: 14px;
+        line-height: 24px;
+        font-family: inherit;
+        font-family: 'Montserrat', sans-serif;
     }
 
     &__input-container {
@@ -78,7 +84,7 @@
     content: url(./assets/images/search-gray.svg);
     width: 24px;
     position: absolute;
-    right: 12px;
+    right: 14px;
     top: 50%;
     pointer-events: none;
     transform: translateY(-50%);
@@ -99,6 +105,7 @@
         position: relative;
         z-index: 1;
         overflow: hidden;
+        height: 748px;
     }
 
     &__circle {
@@ -120,6 +127,7 @@
         font-weight: 700;
         line-height: 88px;
         margin-bottom: 24px;
+        padding-top: 23px;
     }
 
     &__desc {
@@ -140,13 +148,15 @@
         width: 100%;
         border-radius: 8px;
         border: 1px solid;
+        height: 80px;
+        z-index: 5;
     }
 
     &__search-bar::placeholder {
         font-family: 'Montserrat', sans-serif;
         font-size: 16px;
         line-height: 27px;
-        padding-left: 56px;
+        padding-left: 40px;
         color: #808080;
     }
 
@@ -172,12 +182,13 @@
         cursor: pointer;
         font-size: 16px;
         line-height: 24px;
-        padding: 12px 32px;
+        padding: 12px 34px;
         background-color: $colorPink;
         color: #fff;
         font-family: inherit;
         border: 1px solid;
         border-radius: 8px;
+        height: 56px;
     }
 
     &__plus-container {
@@ -190,7 +201,7 @@
         color: #fff;
         font-size: 16px;
         font-weight: 700;
-        line-height: 24px;
+        line-height: 18px;
     }
 
     &__img-container {
@@ -217,7 +228,7 @@
         display: flex;
         flex-direction: column;
         position: absolute;
-        bottom: 48px;
+        bottom: 54px;
         right: 30px;
         background-color: #fff;
         padding: 16px;
@@ -248,12 +259,12 @@
 
     &_verifire {
         top: 303.5px;
-        right: 11.5px;
+        right: 11px;
         transform: rotate(29deg);
     }
 
     &_love {
-        bottom: 235.15px;
+        bottom: 239px;
         left: 55.85px;
         transform: rotate(-19.5deg);
     }
@@ -263,21 +274,21 @@
     &_acces::before {
         content: url(./assets/images/access_alarm.svg);
         width: 28px;
-        margin-right: 8px;
+        margin-right: 5px;
         vertical-align: middle;
     }
 
     &_mentor::before {
         content: url(./assets/images/user.svg);
         width: 28px;
-        margin-right: 8px;
+        margin-right: 5px;
         vertical-align: middle;
     }
 
     &_courses::before {
         content: url(./assets/images/video_library.svg);
         width: 28px;
-        margin-right: 8px;
+        margin-right: 5px;
         vertical-align: middle;
     }
 }
@@ -303,14 +314,16 @@
         color: #aaa;
         cursor: pointer;
         padding: 8px 0;
+        width: 167px;
+        text-align: center;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
     }
 
     &__tab_active {
         color: #fff;
         background-color: $colorPink;
-        width: 167px;
         border-radius: 8px;
-        text-align: center;
     }
 
     &__tab-list {
@@ -345,15 +358,15 @@
         font-size: 12px;
         line-height: 24px;
         font-family: 'Montserrat', sans-serif;
-        font-weight: 500;
+        font-weight: 600;
         color: $colorPink;
-        margin-bottom: 8px;
+        margin-bottom: 11px;
     }
 
     &__star-container {
         display: flex;
         gap: 4.01px;
-        margin-bottom: 16px;
+        margin-bottom: 18px;
     }
 
     &__star {
@@ -363,10 +376,11 @@
 
     &__votes-amount {
         font-size: 14px;
-        line-height: 24px;
+        line-height: 17px;
         font-family: 'Montserrat', sans-serif;
         color: #808080;
-        font-weight: 500;
+        font-weight: 600;
+        padding-left: 3px;
     }
 
     &__price_old {
@@ -375,6 +389,7 @@
         color: #ccc;
         text-decoration: line-through;
         font-family: 'Montserrat', sans-serif;
+        padding-top: 3px;
     }
 
     &__price-container {
@@ -392,7 +407,7 @@
 
     &__image-container {
         position: relative;
-        margin-bottom: 27px;
+        margin-bottom: 24px;
     }
 
     &__category {
@@ -408,6 +423,8 @@
         padding: 4px 24px;
         border: none;
         pointer-events: none;
+        font-family: 'Montserrat', sans-serif;
+        white-space: nowrap;
     }
 }
 
@@ -416,7 +433,7 @@
     grid-template-columns: repeat(4, 1fr);
     row-gap: 24px;
     column-gap: 16px;
-    margin-bottom: 56px;
+    margin-bottom: 57px;
 }
 
 .courses__btn {
@@ -425,11 +442,13 @@
     border: none;
     border-radius: 8px;
     color: #fff;
-    font-weight: 500;
+    font-weight: 600;
     font-family: 'Montserrat', sans-serif;
     display: block;
     margin: 0 auto;
     margin-bottom: 120px;
+    font-size: 16px;
+    line-height: 32px;
 }
 
 .header__btn_pink:hover, .hero__search-btn:hover, .courses__btn:hover {
@@ -443,3 +462,9 @@
     color: #fff;
     border: 1px solid;
 }
+
+.card__category_public {
+    white-space: nowrap;
+}
+
+@import 'media';
