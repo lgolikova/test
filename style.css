@@ -448,6 +448,7 @@
   max-width: 295px;
   padding: 16px;
   border-radius: 8px;
+  cursor: pointer;
 }
 .card:hover {
   box-shadow: 40px 40px 57px rgba(0, 0, 0, 0.1);
@@ -546,6 +547,7 @@
   margin-bottom: 120px;
   font-size: 16px;
   line-height: 32px;
+  cursor: pointer;
 }
 
 .header__btn_pink:hover, .hero__search-btn:hover, .courses__btn:hover {
